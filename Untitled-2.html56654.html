@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Untitled</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+<title>Swaroop's Pickles</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #fff3e0, #ffe0b2);
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(45deg,#bf360c,#ff7043);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 32px;
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+/* FORM */
+.form-box {
+    background: white;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+input {
+    width: 95%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* TITLES */
+h2 {
+    text-align: center;
+    color: #bf360c;
+}
+
+/* PRODUCTS */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    background: white;
+    width: 260px;
+    margin: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* CONTENT */
+.content {
+    padding: 12px;
+}
+
+select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: none;
+}
+
+button {
+    background: #25D366;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1ebd5a;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+🌶️ Swaroop's Pickles  
+<br><small>Authentic Homemade Taste 😋</small>
+</div>
+
+<!-- FORM -->
+<div class="form-box">
+<h3>Enter Your Details</h3>
+<input type="text" id="name" placeholder="Your Name">
+<input type="text" id="phone" placeholder="Phone Number">
+<input type="text" id="address" placeholder="Delivery Address">
+</div>
+
+<h2>🍗 Non-Veg Pickles</h2>
+
+<div class="container">
+
+<div class="product">
+<img src=https://vismaifood.com/storage/app/uploads/public/77e/ae7/f6e/thumb__700_0_0_0_auto.jpg>
+<div class="content">
+<h3>Chicken Pickle</h3>
+<select id="chicken">
+<option>250g - ₹250</option>
+<option>500g - ₹500</option>
+<option>1kg - ₹1000</option>
+</select>
+<button onclick="order('Chicken Pickle','chicken')">Order</button>
+</div>
+</div>
+
+<div class="product">
+<img src=https://i0.wp.com/ahahomefoods.com/wp-content/uploads/2023/02/Chicken-Pickle-Boneless-Godavari-Style.jpg?fit=600%2C600&ssl=1>
+<div class="content">
+<h3>Chicken Boneless</h3>
+<select id="boneless">
+<option>250g - ₹300</option>
+<option>500g - ₹600</option>
+<option>1kg - ₹1200</option>
+</select>
+<button onclick="order('Chicken Boneless','boneless')">Order</button>
+</div>
+</div>
+
+<div class="product">
+<img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1q3T4amfAB50zoqGbQ3S_PQXEl9jvK1CYug&s>
+<div class="content">
+<h3>Mutton Pickle</h3>
+<select id="mutton">
+<option>250g - ₹475</option>
+<option>500g - ₹950</option>
+<option>1kg - ₹1900</option>
+</select>
+<button onclick="order('Mutton Pickle','mutton')">Order</button>
+</div>
+</div>
+
+<div class="product">
+<img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTewWA7lV14JautDljL2fu9NXUkE9P-iOoe5Q&s>
+<div class="content">
+<h3>Prawns Pickle</h3>
+<select id="prawns">
+<option>250g - ₹450</option>
+<option>500g - ₹900</option>
+<option>1kg - ₹1800</option>
+</select>
+<button onclick="order('Prawns Pickle','prawns')">Order</button>
+</div>
+</div>
+
+</div>
+
+<h2>🥭 Veg Pickles</h2>
+
+<div class="container">
+
+<div class="product">
+<img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw5rOhMgt-MJWFfr0voiL5zxxNiZe0ZwuHjg&s>
+<div class="content">
+<h3>Mango Pickle</h3>
+<select id="mango">
+<option>250g - ₹100</option>
+<option>500g - ₹200</option>
+<option>1kg - ₹350</option>
+</select>
+<button onclick="order('Mango Pickle','mango')">Order</button>
+</div>
+</div>
+
+<div class="product">
+<img src=https://tulasipickles.com/wp-content/uploads/2024/11/Gongura.jpg>
+<div class="content">
+<h3>Gongura Pickle</h3>
+<select id="gongura">
+<option>250g - ₹100</option>
+<option>500g - ₹200</option>
+<option>1kg - ₹350</option>
+</select>
+<button onclick="order('Gongura Pickle','gongura')">Order</button>
+</div>
+</div>
+
+<div class="product">
+<img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCYWblb2xcK1VAy6tF1_Tv1-ddyR-9TRFrZg&s>
+<div class="content">
+<h3>Tomato Pickle</h3>
+<select id="tomato">
+<option>250g - ₹100</option>
+<option>500g - ₹200</option>
+<option>1kg - ₹350</option>
+</select>
+<button onclick="order('Tomato Pickle','tomato')">Order</button>
+</div>
+</div>
+
+<div class="product">
+<img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyz4z-x7N-KtD90vgTAdJV4nzJ6O2R5qa1tA&s>
+<div class="content">
+<h3>Red Chilli Pickle</h3>
+<select id="chilli">
+<option>250g - ₹100</option>
+<option>500g - ₹200</option>
+<option>1kg - ₹350</option>
+</select>
+<button onclick="order('Red Chilli Pickle','chilli')">Order</button>
+</div>
+</div>
+
+<div class="product">
+<img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRiE78aqrpuFagrQHguLdhMwMFML9CAxN_ZQ&s>
+<div class="content">
+<h3>Pudina Pickle</h3>
+<select id="pudina">
+<option>250g - ₹100</option>
+<option>500g - ₹200</option>
+<option>1kg - ₹350</option>
+</select>
+<button onclick="order('Pudina Pickle','pudina')">Order</button>
+</div>
+</div>
+
+<div class="product">
+<img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBMr7rewQ3zDqoqfqgzkKL0-p0L0nj90rb1g&s
+<div class="content">
+<h3>Usirikaya Pickle</h3>
+<select id="usiri">
+<option>250g - ₹100</option>
+<option>500g - ₹200</option>
+<option>1kg - ₹350</option>
+</select>
+<button onclick="order('Usirikaya Pickle','usiri')">Order</button>
+</div>
+</div>
+
+</div>
+
+<script>
+function order(product,id){
+
+var name=document.getElementById("name").value;
+var phoneUser=document.getElementById("phone").value;
+var address=document.getElementById("address").value;
+var qty=document.getElementById(id).value;
+
+if(name=="" || phoneUser=="" || address==""){
+alert("Please fill all details");
+return;
+}
+
+var msg="🛒 *NEW ORDER* %0A%0A"
++"👤 Name: "+name+"%0A"
++"📞 Phone: "+phoneUser+"%0A"
++"🏠 Address: "+address+"%0A%0A"
++"📦 Product: "+product+"%0A"
++"📏 Quantity: "+qty+"%0A%0A"
++"🔥 Swaroop's Pickles Order";
+
+var phone="917901091495";
+
+window.open("https://wa.me/"+phone+"?text="+msg);
+}
+</script>
+
+</body>
+</html>
